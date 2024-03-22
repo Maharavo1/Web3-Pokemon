@@ -15,14 +15,14 @@ const CircleBackground = () => {
             className='rounded-lg bg-gradient-to-r from-yellow-400 via-green-500 to-blue-500 px-5 py-2 text-sm font-semibold text-white transition-all hover:shadow-2xl hover:bg-gradient-to-r hover:from-yellow-400 hover:via-green-500 hover:to-blue-500'
             style={{ transitionDuration: '0.3s' }} 
           >
-            Use server
+            Server
           </a>
           <a
             href='/client'
             className='rounded-lg bg-gradient-to-r from-yellow-400 via-green-500 to-blue-500 px-5 py-2 text-sm font-semibold text-white transition-all hover:shadow-2xl hover:bg-gradient-to-r hover:from-yellow-400 hover:via-green-500 hover:to-blue-500'
             style={{ transitionDuration: '0.3s' }} 
           >
-            Use client
+            Client
           </a>
         </div>
       </div>
