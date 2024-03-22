@@ -31,7 +31,7 @@ const Pokemonn: React.FC = () => {
         <h1 className='text-3xl text-blue-700 font-serif font-extrabold tracking-wide'>List Pokemon</h1>
       </div>
       <div className='mt-8 flex w-full flex-wrap items-center justify-center gap-10'>
-        {pokemonList.map((pokemon: Pokemon) => {
+        {pokemonList.map((pokemon: Pokemon  , index: number) => {
           const pokemonId: string = pokemon.url.split('/')[6];
           const paddedPokemonId: string = pokemonId.padStart(3, '0');
 
@@ -48,7 +48,7 @@ const Pokemonn: React.FC = () => {
                   />
                 </div>
                  <h3 className='mt-4 w-full text-center text-sm font-bold capitalize text-blue-700'>
-                  {pokemon.name}
+                 {index + 1} {pokemon.name}
                 </h3>
               </div>
             </Link>
