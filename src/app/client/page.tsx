@@ -13,6 +13,10 @@ type Pokemon = {
 const Pokemonn: React.FC = () => {
   const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
   const [currentPage] = useState<number>(1);
+  const navigateToDetailsPage = (pokemonId: string) => {
+    window.location.href = `/client/${pokemonId}`;
+  };
+
 
   useEffect(() => {
     fetchListPokemon(currentPage).then(setPokemonList);
@@ -50,6 +54,7 @@ const Pokemonn: React.FC = () => {
                  <h3 className='mt-4 w-full text-center text-sm font-bold capitalize text-blue-700'>
                  {index + 1} {pokemon.name}
                 </h3>
+                <div className='text-sm text-blue-600 hover:underline mt-2' onClick={() => navigateToDetailsPage(pokemonId)}>Détails</div>
               </div>
             </Link>
           );
